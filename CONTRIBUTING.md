@@ -4,18 +4,18 @@ Thanks for your interest in NexusClaw.
 
 ## Project Scope
 
-NexusClaw is an open-core government-domain knowledge Q&A platform. The public
-repository focuses on the reusable application framework:
+NexusClaw is a knowledge Q&A platform for building grounded assistants over
+domain-specific documents, workflows, and operational knowledge. This repository
+focuses on the reusable application framework:
 
 - FastAPI backend for project configuration, knowledge management, retrieval,
   chat orchestration, logs, and evaluation scaffolding
 - admin web console
-- citizen-facing portal web experience
+- user-facing portal web experience
 - local RAG and scene-agent helpers
 
-Private deployments, customer-specific knowledge bases, quotations, credentials,
-production data, and advanced hosted-operation assets should stay outside this
-repository.
+Do not commit credentials, real `.env` files, uploaded documents, generated
+storage files, database dumps, or other private runtime data.
 
 ## Development Workflow
 
