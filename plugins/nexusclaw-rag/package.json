@@ -1,0 +1,17 @@
+{
+  "name": "nexusclaw-rag-bundle",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "description": "OpenClaw-compatible NexusClaw scene agent runtime with RAG support",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "cli": "node ./scripts/gzt-rag-cli.mjs",
+    "mcp": "node ./scripts/gzt-rag-mcp.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.0"
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "scene_key": "hk_tax_address_change",
+  "title": "香港稅務地址變更助理",
+  "entry": {
+    "action_keywords": [
+      "改地址",
+      "變更地址",
+      "更改地址",
+      "搬家",
+      "搬辦公室",
+      "填写",
+      "填表",
+      "生成pdf",
+      "生成表格",
+      "發郵件",
+      "發送給稅局",
+      "send to ird",
+      "ir1249",
+      "irc3111a"
+    ],
+    "knowledge_keywords": [
+      "是什麼",
+      "是什麼",
+      "什麼是",
+      "什麼是",
+      "什麼",
+      "什麼",
+      "什麼意思",
+      "什麼意思",
+      "多久內",
+      "多久",
+      "可不可以",
+      "能不能",
+      "提交方式",
+      "如何提交",
+      "怎麼提交",
+      "怎麼提交",
+      "官方要求"
+    ]
+  },
+  "citations": [
+    {
+      "label": "Notification of Change of Postal Address",
+      "url": "https://www.ird.gov.hk/eng/tax/ind_nca.htm"
+    },
+    {
+      "label": "Public Forms",
+      "url": "https://www.ird.gov.hk/eng/paf/for.htm"
+    }
+  ],
+  "routes": {
+    "ir1249": {
+      "form_no": "IR1249",
+      "title": "通訊地址變更",
+      "route_keywords": [
+        "收稅單地址",
+        "通訊地址",
+        "postal address",
+        "個人地址",
+        "稅務檔案地址",
+        "ir1249"
+      ],
+      "allow_email_submission": true,
+      "require_signature_confirmation": true,
+      "submission_email": "taxctr1@ird.gov.hk",
+      "submission_guide": "請確認已完成簽署。若專案設定為 draft_only，則系統只會生成郵件預覽與附件，由使用者自行發送。",
+      "citations": [
+        {
+          "label": "IR1249 PDF",
+          "url": "https://www.ird.gov.hk/eng/pdf/ir1249.pdf"
+        },
+        {
+          "label": "Public Forms",
+          "url": "https://www.ird.gov.hk/eng/paf/for.htm"
+        }
+      ],
+      "required_fields": [
+        "applicant_type",
+        "effective_date",
+        "new_address",
+        "daytime_phone",
+        "signer_name"
+      ],
+      "field_options": {
+        "applicant_type": [
+          {
+            "value": "salary earner",
+            "label": "受薪人士",
+            "description": "適用於一般個人報稅或收稅單通訊地址變更"
+          },
+          {
+            "value": "property owner",
+            "label": "物業持有人",
+            "description": "適用於物業稅檔案相關的通訊地址變更"
+          },
+          {
+            "value": "sole proprietor",
+            "label": "獨資經營者",
+            "description": "適用於獨資業務負責人"
+          },
+          {
+            "value": "business owner",
+            "label": "業務負責人",
+            "description": "適用於公司或業務利得稅檔案"
+          },
+          {
+            "value": "employer",
+            "label": "僱主",
+            "description": "適用於僱主報稅表檔案"
+          }
+        ]
+      },
+      "applicant_profiles": {
+        "salary earner": {
+          "required_fields": ["reference_id", "full_name"],
+          "visible_fields": ["reference_id", "full_name", "individual_file_no"],
+          "recommended_fields": ["individual_file_no"]
+        },
+        "property owner": {
+          "required_fields": ["reference_id", "full_name", "property_tax_location", "property_tax_file_no"],
+          "visible_fields": ["reference_id", "full_name", "property_tax_location", "property_tax_file_no"]
+        },
+        "sole proprietor": {
+          "required_fields": ["reference_id", "full_name", "business_name", "profits_tax_file_no"],
+          "visible_fields": ["reference_id", "full_name", "business_name", "profits_tax_file_no"]
+        },
+        "business owner": {
+          "required_fields": ["business_name", "profits_tax_file_no", "designation"],
+          "visible_fields": ["business_name", "profits_tax_file_no", "designation"]
+        },
+        "employer": {
+          "required_fields": ["business_name", "employer_return_file_no", "designation"],
+          "visible_fields": ["business_name", "employer_return_file_no", "designation"]
+        }
+      },
+      "field_labels": {
+        "effective_date": "新地址生效日期",
+        "new_address": "新通訊地址",
+        "applicant_type": "申請人類別",
+        "reference_id": "香港身分證號碼",
+        "daytime_phone": "日間聯絡電話",
+        "signer_name": "簽署人姓名",
+        "full_name": "姓名",
+        "individual_file_no": "個別人士稅檔編號",
+        "property_tax_location": "物業地點",
+        "property_tax_file_no": "物業稅檔編號",
+        "business_name": "業務 / 公司名稱",
+        "profits_tax_file_no": "利得稅檔案編號",
+        "employer_return_file_no": "僱主報稅表檔案編號",
+        "designation": "職位"
+      },
+      "field_questions": {
+        "effective_date": "請提供新通訊地址的生效日期。",
+        "new_address": "請提供新的通訊地址，請盡量包含地區、樓宇、街道 / 門牌等完整資訊。",
+        "applicant_type": "請先選擇申請人類別，我會按你的類別決定接下來要收集哪些資料。",
+        "reference_id": "請提供香港身分證號碼。",
+        "daytime_phone": "請提供日間聯絡電話。",
+        "signer_name": "請提供簽署人姓名。",
+        "full_name": "請提供你的姓名。",
+        "individual_file_no": "如你知道個別人士稅檔編號，建議一併提供。",
+        "property_tax_location": "請提供物業地點。",
+        "property_tax_file_no": "請提供物業稅檔編號。",
+        "business_name": "請提供業務 / 公司名稱。",
+        "profits_tax_file_no": "請提供利得稅檔案編號。",
+        "employer_return_file_no": "請提供僱主報稅表檔案編號。",
+        "designation": "請提供簽署人的職位。"
+      }
+    },
+    "irc3111a": {
+      "form_no": "IRC3111A",
+      "title": "業務地址變更",
+      "route_keywords": [
+        "業務地址",
+        "辦公室地址",
+        "公司營業地址",
+        "商業登記地址",
+        "business address",
+        "irc3111a",
+        "搬辦公室"
+      ],
+      "allow_email_submission": false,
+      "require_signature_confirmation": false,
+      "blocked_submission_methods": [
+        "email",
+        "fax"
+      ],
+      "submission_guide": "IRC3111A 不可經 email 或 fax 提交。系統只會生成 PDF，並提示使用者按官方方式提交。",
+      "citations": [
+        {
+          "label": "IRC3111A PDF",
+          "url": "https://www.ird.gov.hk/eng/pdf/irc3111a_normal.pdf"
+        }
+      ],
+      "required_fields": [
+        "business_registration_no",
+        "business_name",
+        "effective_date",
+        "old_address",
+        "new_address",
+        "signer_name",
+        "signer_identity_no",
+        "telephone_no"
+      ],
+      "field_labels": {
+        "business_registration_no": "商業登記號碼",
+        "business_name": "業務名稱",
+        "effective_date": "生效日期",
+        "old_address": "舊業務地址",
+        "new_address": "新業務地址",
+        "signer_name": "簽署人姓名",
+        "signer_identity_no": "簽署人身分證號碼 / 護照號碼 / 商業登記號碼",
+        "telephone_no": "聯絡電話"
+      },
+      "field_questions": {
+        "business_registration_no": "請提供商業登記號碼。",
+        "business_name": "請提供業務名稱。",
+        "effective_date": "請提供新業務地址的生效日期。",
+        "old_address": "請提供原有業務地址。",
+        "new_address": "請提供新的業務地址，可直接整段輸入。",
+        "signer_name": "請提供簽署人姓名。",
+        "signer_identity_no": "請提供簽署人的身分證號碼、護照號碼（含簽發地）或商業登記號碼。",
+        "telephone_no": "請提供聯絡電話。"
+      }
+    }
+  }
+}

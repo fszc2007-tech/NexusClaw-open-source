@@ -1,0 +1,27 @@
+version: '3.9'
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: nexusclaw-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-change-me-root}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-nexusclaw}
+      MYSQL_USER: ${MYSQL_USER:-nexusclaw}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-change-me}
+    ports:
+      - '3306:3306'
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  redis:
+    image: redis:7
+    container_name: nexusclaw-redis
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis_data:/data
+
+volumes:
+  mysql_data:
+  redis_data:

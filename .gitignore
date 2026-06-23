@@ -1,0 +1,50 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+.venv-paddleocr/
+venv/
+.env
+.env.*
+!.env.example
+!.env.*.example
+.python-version
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+dist/
+build/
+.next/
+coverage/
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# Uploads / local data
+uploads/
+storage/
+*.db
+tmp/
+docs/quotations/
+docs/codex-*.md
+AGENTS.md
+
+# Frontend generated files
+frontend/*/src/.umi/
+frontend/*/src/.umi-production/
+frontend/*/dist/
+
+# Backend temporary files
+backend/api-server/.tmp_parser_validation/
+backend/api-server/.tmp_service_storage/
+backend/api-server/tmp/

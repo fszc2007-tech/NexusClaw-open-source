@@ -1,0 +1,18 @@
+{
+  "name": "nexusclaw-admin-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "node scripts/ensure-umi-dev-ip.cjs",
+    "dev": "node scripts/ensure-umi-dev-ip.cjs && node scripts/dev-with-open.cjs",
+    "dev:clean": "rm -rf node_modules/.cache .umi dist && node scripts/ensure-umi-dev-ip.cjs && node scripts/dev-with-open.cjs",
+    "build": "max build"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.2.2",
+    "@umijs/max": "^4.3.25",
+    "antd": "^5.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

@@ -1,0 +1,42 @@
+export default {
+  npmClient: 'pnpm',
+  /** eager MFSU 文件监视过多易触发 EMFILE 导致 dev 进程退出，浏览器表现为 -102 连接被拒绝 */
+  mfsu: {
+    strategy: 'normal',
+  },
+  proxy: {
+    '/api': {
+      target: 'http://127.0.0.1:8000',
+      changeOrigin: true,
+    },
+  },
+  routes: [
+    { path: '/login', component: '@/pages/User/Login' },
+    { path: '/', redirect: '/knowledge/bases' },
+    { path: '/workbench', redirect: '/knowledge/bases' },
+    { path: '/experience/chat', component: '@/pages/experience/Chat' },
+    { path: '/experience/search', component: '@/pages/experience/Search' },
+    { path: '/experience/document-qa', component: '@/pages/experience/DocumentQA' },
+    { path: '/settings/opening', component: '@/pages/settings/Opening' },
+    { path: '/settings/prompt', component: '@/pages/settings/Prompt' },
+    { path: '/knowledge/bases', component: '@/pages/knowledge/Bases' },
+    { path: '/knowledge/governance', component: '@/pages/knowledge/Governance' },
+    { path: '/knowledge/bases/:kbId/items', component: '@/pages/knowledge/Items' },
+    { path: '/knowledge/bases/:kbId/items/new', component: '@/pages/knowledge/Editor' },
+    { path: '/knowledge/bases/:kbId/items/:id/edit', component: '@/pages/knowledge/Editor' },
+    { path: '/knowledge/bases/:kbId/tree', component: '@/pages/knowledge/Tree' },
+    { path: '/knowledge/bases/:kbId/files', component: '@/pages/knowledge/Files' },
+    { path: '/testing/datasets', component: '@/pages/testing/Datasets' },
+    { path: '/testing/datasets/:id/items', component: '@/pages/testing/DatasetItems' },
+    { path: '/testing/tasks', component: '@/pages/testing/Tasks' },
+    { path: '/testing/tasks/:id', component: '@/pages/testing/TaskDetail' },
+    { path: '/logs/chat', component: '@/pages/logs/ChatList' },
+    { path: '/logs/chat/:id', component: '@/pages/logs/ChatDetail' },
+    { path: '/users', component: '@/pages/users/List' },
+    { path: '/users/:id/edit', component: '@/pages/users/Edit' },
+    { path: '/projects', component: '@/pages/projects/List' },
+    { path: '/projects/new', component: '@/pages/projects/New' },
+    { path: '/projects/:id/edit', component: '@/pages/projects/Edit' },
+    { path: '/projects/:id/members', component: '@/pages/projects/Members' },
+  ],
+};

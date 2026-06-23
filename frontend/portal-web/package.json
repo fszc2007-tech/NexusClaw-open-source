@@ -1,0 +1,15 @@
+{
+  "name": "nexusclaw-portal-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "max dev",
+    "build": "max build"
+  },
+  "dependencies": {
+    "@umijs/max": "^4.3.25",
+    "antd": "^5.21.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

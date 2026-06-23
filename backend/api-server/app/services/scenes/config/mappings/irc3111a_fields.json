@@ -1,0 +1,38 @@
+{
+  "form_no": "IRC3111A",
+  "kind": "overlay",
+  "fields": [
+    { "key": "business_registration_no", "label": "Business Registration No." },
+    { "key": "business_name", "label": "Business Name" },
+    { "key": "effective_date", "label": "Effective Date" },
+    { "key": "old_address", "label": "Old Business Address" },
+    { "key": "new_address", "label": "New Business Address" },
+    { "key": "signer_name", "label": "Signer Name" },
+    { "key": "signer_identity_no", "label": "Signer Identity No." },
+    { "key": "telephone_no", "label": "Telephone No." }
+  ],
+  "overlay": {
+    "page_index": 0,
+    "date_fields": {
+      "day": { "x": 286, "y": 605, "font_size": 11 },
+      "month": { "x": 345, "y": 605, "font_size": 11 },
+      "year": { "x": 392, "y": 605, "font_size": 11 }
+    },
+    "checkboxes": {
+      "business_address": { "x": 301, "y": 580.8, "font_size": 12, "text": "x" },
+      "branch_business_address": { "x": 301, "y": 568.8, "font_size": 12, "text": "x" },
+      "profits_tax_postal_address": { "x": 48, "y": 253.08, "font_size": 12, "text": "x" },
+      "employer_return_postal_address": { "x": 48, "y": 214.68, "font_size": 12, "text": "x" }
+    },
+    "text_fields": {
+      "business_registration_no": { "x": 430, "y": 688, "font_size": 11 },
+      "business_name": { "x": 250, "y": 642, "font_size": 11, "max_width": 280 },
+      "old_address": { "x": 165, "y": 551.5, "font_size": 10.5, "max_width": 360, "max_lines": 2, "line_height": 14 },
+      "new_address": { "x": 160, "y": 470, "font_size": 10.5, "max_width": 360, "max_lines": 4, "line_height": 16 },
+      "signer_name": { "x": 145, "y": 157, "font_size": 10.5, "max_width": 120 },
+      "signer_identity_no": { "x": 60, "y": 92, "font_size": 10.5, "max_width": 470 },
+      "telephone_no": { "x": 400, "y": 18, "font_size": 10.5, "max_width": 140 }
+    },
+    "signature_date": { "x": 330, "y": 40.67, "font_size": 10.5 }
+  }
+}

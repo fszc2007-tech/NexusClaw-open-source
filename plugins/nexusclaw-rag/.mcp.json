@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "nexusclaw-rag": {
+      "command": "bash",
+      "args": [
+        "./plugins/nexusclaw-rag/scripts/run_mcp.sh"
+      ]
+    }
+  }
+}

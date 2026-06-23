@@ -1,0 +1,9 @@
+{
+  "apiBaseUrl": "http://127.0.0.1:8000",
+  "apiPrefix": "/api/v1",
+  "projectId": 3,
+  "selectedKbIds": [],
+  "requestTimeoutMs": 30000,
+  "sceneRequestTimeoutMs": 90000,
+  "localRagHealthUrl": "http://127.0.0.1:8101/health"
+}

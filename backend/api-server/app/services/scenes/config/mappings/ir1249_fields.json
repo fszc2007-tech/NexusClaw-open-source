@@ -1,0 +1,68 @@
+{
+  "form_no": "IR1249",
+  "kind": "acroform",
+  "fields": [
+    { "key": "effective_date", "label": "Effective Date" },
+    { "key": "new_address", "label": "New Postal Address" },
+    { "key": "applicant_type", "label": "Applicant Type" },
+    { "key": "reference_id", "label": "HKID / File No." },
+    { "key": "daytime_phone", "label": "Daytime Phone" },
+    { "key": "signer_name", "label": "Signer Name" }
+  ],
+  "acroform": {
+    "date_fields": {
+      "day": "Day",
+      "month": "Month1",
+      "year": "Year1"
+    },
+    "address_fields": {
+      "flat_room": "Flat/Room",
+      "block": "Block",
+      "floor": "Floor",
+      "line1": "Line1",
+      "line2": "Line2",
+      "line3": "Line3"
+    },
+    "text_fields": {
+      "individual_name": "Name1",
+      "individual_file_no": "ST File No",
+      "property_tax_location": "Property Location",
+      "property_tax_file_no": "JPT File No",
+      "other_tax_file_no": "Other File No",
+      "signature_date": "Date 1",
+      "full_name": "Full Name",
+      "business_name": "Name of business",
+      "profits_tax_file_no": "PF File No",
+      "employer_name": "Er Name",
+      "employer_return_file_no": "ER File No",
+      "signature_date_2": "Date 2",
+      "daytime_phone": "Daytime Contact Telephone No",
+      "daytime_phone_2": "Daytime Contact Telephone No 1",
+      "fax_no": "Fax No",
+      "signer_name": "Signing Person",
+      "designation": "Designation"
+    },
+    "reference_fields": {
+      "hkid_prefix": "HK Identity Card No1",
+      "hkid_digits": "HK Identity No2",
+      "hkid_check_digit": "Check Digit",
+      "fallback_individual_file_no": "ST File No",
+      "fallback_other_file_no": "Other File No"
+    },
+    "checkbox_groups": {
+      "area": {
+        "hk": "Check Box1",
+        "kln": "Check Box2",
+        "nt": "Check Box3",
+        "others": "Check Box4"
+      },
+      "file_type": {
+        "salary_earner": "Check Box5",
+        "property_owner": "Check Box6",
+        "sole_proprietor": "Check Box7",
+        "business_owner": "Check Box8",
+        "employer": "Check Box9"
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "nexusclaw-rag",
+  "version": "0.2.0",
+  "description": "OpenClaw-compatible NexusClaw scene agent runtime with RAG support",
+  "author": {
+    "name": "NexusClaw contributors",
+    "email": "maintainers@example.com",
+    "url": "https://github.com/fszc2007-tech/NexusClaw"
+  },
+  "homepage": "https://github.com/fszc2007-tech/NexusClaw",
+  "repository": "https://github.com/fszc2007-tech/NexusClaw",
+  "license": "Apache-2.0",
+  "keywords": [
+    "openclaw",
+    "rag",
+    "knowledge-base",
+    "nexusclaw"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "NexusClaw RAG",
+    "shortDescription": "Run NexusClaw workflow cases and grounded RAG from OpenClaw",
+    "longDescription": "Adds NexusClaw scene workflow control, field collection, PDF and mail actions, grounded knowledge search, and health checks to a local OpenClaw deployment via MCP tools and bundled skills.",
+    "developerName": "NexusClaw contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/fszc2007-tech/NexusClaw",
+    "privacyPolicyURL": "https://github.com/fszc2007-tech/NexusClaw/security/policy",
+    "termsOfServiceURL": "https://github.com/fszc2007-tech/NexusClaw/blob/main/LICENSE",
+    "defaultPrompt": [
+      "Ask NexusClaw how to handle a Hong Kong permit workflow.",
+      "Start a NexusClaw scene case, collect the missing fields, and generate the PDF.",
+      "Search the knowledge base and cite the top matching policy document.",
+      "Check whether the local NexusClaw workflow and RAG stack are healthy."
+    ],
+    "brandColor": "#0F766E"
+  }
+}

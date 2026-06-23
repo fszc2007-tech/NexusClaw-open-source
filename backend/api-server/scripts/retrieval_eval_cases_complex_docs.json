@@ -1,0 +1,86 @@
+[
+  {
+    "id": "en-company-step1",
+    "query": "What documents are required in Step 1 to register a local limited company?",
+    "expected_document_names": ["cr_register_company.html"],
+    "expected_hit_keywords": ["step 1", "deliver documents"],
+    "tags": ["en", "company"]
+  },
+  {
+    "id": "zh-company-step1",
+    "query": "本地有限公司註冊第一步要交什麼文件？",
+    "expected_document_names": ["cr_register_company.html"],
+    "expected_hit_keywords": ["step 1", "deliver documents"],
+    "tags": ["zh", "company", "cross_lingual"]
+  },
+  {
+    "id": "en-amend-return",
+    "query": "How do I amend or supplement a tax return already submitted through the Internet?",
+    "expected_document_names": ["govhk_tax_filing.html"],
+    "expected_hit_keywords": ["amendment", "supplement", "through the internet"],
+    "tags": ["en", "tax"]
+  },
+  {
+    "id": "zh-amend-return",
+    "query": "網上提交報稅表後怎樣更正或補充資料？",
+    "expected_document_names": ["govhk_tax_filing.html"],
+    "expected_hit_keywords": ["amendment", "supplement", "through the internet"],
+    "tags": ["zh", "tax", "cross_lingual"]
+  },
+  {
+    "id": "en-rop169",
+    "query": "Who should use Form ROP169?",
+    "expected_document_names": ["immd_right_of_abode_apply.html"],
+    "expected_hit_keywords": ["verification of eligibility", "permanent identity card"],
+    "tags": ["en", "immigration"]
+  },
+  {
+    "id": "zh-rop169",
+    "query": "ROP169 適用於哪類申請人？",
+    "expected_document_names": ["immd_right_of_abode_apply.html"],
+    "expected_hit_keywords": ["verification of eligibility", "permanent identity card"],
+    "tags": ["zh", "immigration", "cross_lingual"]
+  },
+  {
+    "id": "en-postal-address",
+    "query": "How can I notify the IRD of a change of postal address?",
+    "expected_document_names": ["ird_change_postal_address.html"],
+    "expected_hit_keywords": ["change of postal address"],
+    "tags": ["en", "tax"]
+  },
+  {
+    "id": "zh-postal-address",
+    "query": "更改通訊地址可以怎樣通知稅務局？",
+    "expected_document_names": ["ird_change_postal_address.html"],
+    "expected_hit_keywords": ["change of postal address"],
+    "tags": ["zh", "tax", "cross_lingual"]
+  },
+  {
+    "id": "en-biz-extract",
+    "query": "How can I obtain a certified extract of information on the Business Register?",
+    "expected_document_names": ["ird_business_registration_eservices.html"],
+    "expected_hit_keywords": ["certified extract", "business register"],
+    "tags": ["en", "business"]
+  },
+  {
+    "id": "zh-biz-extract",
+    "query": "如何申請商業登記冊的核證摘錄？",
+    "expected_document_names": ["ird_business_registration_eservices.html"],
+    "expected_hit_keywords": ["certified extract", "business register"],
+    "tags": ["zh", "business", "cross_lingual"]
+  },
+  {
+    "id": "en-allowances",
+    "query": "What kinds of allowances can be claimed under salaries tax and personal assessment?",
+    "expected_document_names": ["govhk_tax_filing.html"],
+    "expected_hit_keywords": ["allowances"],
+    "tags": ["en", "tax"]
+  },
+  {
+    "id": "zh-allowances",
+    "query": "薪俸稅和個人入息課稅可以申索哪些免稅額？",
+    "expected_document_names": ["govhk_tax_filing.html"],
+    "expected_hit_keywords": ["allowances"],
+    "tags": ["zh", "tax", "cross_lingual"]
+  }
+]
