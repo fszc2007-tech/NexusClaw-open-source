@@ -12,6 +12,19 @@ NexusClaw sits between low-level LLM frameworks and fully hosted no-code tools.
 - Compared with general chatbot UIs, NexusClaw focuses on managed knowledge bases, source-aware answers, and operational review workflows.
 - Compared with no-code platforms, NexusClaw is code-first and easier to customize deeply inside your own stack.
 
+## Comparison Guide
+
+NexusClaw is not trying to replace every assistant builder. It is optimized for teams that want a code-first foundation for knowledge operations.
+
+| Tool category | Typical strength | Where NexusClaw differs |
+| --- | --- | --- |
+| Dify-style app builders | Fast app assembly, workflow orchestration, hosted-friendly operations | NexusClaw is code-first and emphasizes project-level knowledge operations, source inspection, governance, and custom backend control |
+| AnythingLLM-style knowledge workspaces | Personal or team knowledge bases with straightforward document Q&A | NexusClaw includes admin/portal separation, evaluation tasks, governance flows, and scene workflow primitives |
+| Open WebUI-style chat interfaces | Model access, chat UX, user-facing LLM interaction | NexusClaw focuses on managed domain documents, retrieval governance, file pipelines, and operational logs around knowledge quality |
+| LangChain/LlamaIndex templates | Flexible low-level developer primitives | NexusClaw adds product surfaces, database models, migrations, admin UI, portal UI, and workflows around the retrieval layer |
+
+The goal is not to claim these projects are worse. The goal is to make NexusClaw's design center clear: knowledge operations, document workflows, evidence tracking, evaluation, and governance in an extensible application stack.
+
 ## What Makes It Different
 
 ### Knowledge Operations, Not Just Chat

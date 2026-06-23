@@ -29,6 +29,7 @@ cp .env.example .env
 python3.13 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+alembic upgrade head
 uvicorn main:app --reload --port 8000
 ```
 
@@ -219,18 +220,31 @@ pnpm dev
 UMI_APP_API_BASE_URL=http://127.0.0.1:8000/api/v1 pnpm dev
 ```
 
-## 5. 当前代码状态
+## 5. Current Status
 
-当前仓库为首批开发骨架，已具备：
-- FastAPI 入口
-- 项目 / 知识 / 查重 / 问答接口占位
-- 项目、人设、知识、查重、会话表模型首版
-- 门户端与管理端的最小页面骨架
+This repository is an early open-source release of NexusClaw.
 
-## 6. 下一步开发建议
+Implemented:
 
-1. 加 Alembic 迁移
-2. 补真实 CRUD
-3. 将 dedup endpoint 接到 dedup service
-4. 前端接通后端接口
-5. 接入检索与大模型链路
+- FastAPI backend with service modules and Alembic migrations
+- Admin and portal frontend applications
+- Project configuration, knowledge management, chat, file, log, and evaluation modules
+- File upload, parsing, chunking, preview, and document Q&A paths
+- Local RAG service with vector/search/rerank-compatible endpoints
+- Retrieval orchestration with keyword, vector, rerank, chunk, and fallback paths
+- Knowledge deduplication, freshness, conflict, compilation, and governance flows
+- OpenClaw-compatible plugin bundle with RAG and scene runtime helpers
+
+Partially implemented:
+
+- Production-grade vector search backend
+- Unified snippet-level citation across all chat paths
+- Full RBAC, authentication hardening, and project-level authorization
+- Turnkey deployment packaging for production environments
+
+Not production-ready yet:
+
+- Public multi-tenant SaaS usage without additional security hardening
+- Strict regulated enterprise deployments
+- External connector ecosystems without custom integration work
+- Fully unattended production operations

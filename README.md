@@ -4,6 +4,26 @@ NexusClaw is an open-source knowledge operations platform for building grounded 
 
 It is not just a RAG chatbot template. NexusClaw combines document ingestion, project configuration, retrieval, answer generation, source inspection, logs, evaluation, knowledge governance, and structured scene workflows in one developer-friendly stack.
 
+## Current Status
+
+NexusClaw is in an early open-source release.
+
+Good for:
+
+- local development and architecture exploration
+- RAG pipeline experimentation
+- document Q&A prototypes
+- admin and portal workflow exploration
+- knowledge governance and evaluation flow review
+- OpenClaw plugin integration experiments
+
+Not yet production-ready for:
+
+- public multi-tenant SaaS without additional hardening
+- strict RBAC or regulated enterprise environments
+- unattended production deployment
+- external connector ecosystems without custom integration work
+
 ## Why NexusClaw
 
 - Built for operational knowledge systems, not only one-off chatbot demos
@@ -161,6 +181,7 @@ Do not commit real `.env` files, credentials, uploaded documents, generated stor
 
 ## Documentation
 
+- `ROADMAP.md`
 - `docs/LOCAL_DEV.md`
 - `docs/WHY_NEXUSCLAW.md`
 - `docs/api/API_SPEC.md`
