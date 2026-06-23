@@ -1,8 +1,8 @@
 # NexusClaw
 
-NexusClaw is an open-source knowledge Q&A platform for building grounded, configurable assistants over domain-specific documents and workflows.
+NexusClaw is an open-source knowledge operations platform for building grounded assistants over domain documents, workflows, citations, evaluation, and governance.
 
-It includes a FastAPI backend, an admin console, a user-facing portal, local RAG utilities, and scene workflow helpers for structured information collection and document-oriented service flows.
+It is not just a RAG chatbot template. NexusClaw combines document ingestion, project configuration, retrieval, answer generation, source inspection, logs, evaluation, knowledge governance, and structured scene workflows in one developer-friendly stack.
 
 ## Why NexusClaw
 
@@ -12,6 +12,17 @@ It includes a FastAPI backend, an admin console, a user-facing portal, local RAG
 - Designed for evidence-aware answers, source inspection, and governance loops
 - Can run with lightweight local retrieval first, then be extended to model-backed embedding and reranking
 - Provides scene workflow primitives for tasks that need structured fields, confirmations, generated artifacts, or action previews
+
+## Good Fit
+
+NexusClaw is useful when you need more than a prompt wrapper:
+
+- internal knowledge assistants with managed source documents
+- public-service or enterprise support portals
+- policy, SOP, FAQ, or handbook Q&A with traceable answers
+- document-heavy workflows that need file parsing, chunking, and review
+- evaluation loops for testing answer quality over time
+- workflows that combine chat with structured fields and generated artifacts
 
 ## Technical Highlights
 
@@ -25,6 +36,23 @@ It includes a FastAPI backend, an admin console, a user-facing portal, local RAG
 - Portal web app with project selection, upload flow, chat memory indicators, and retrieval mode controls
 - OpenClaw-compatible plugin bundle exposing RAG and scene runtime tools through MCP/CLI helpers
 - Secret-safe development setup with example env files and a checked-in `detect-secrets` baseline
+
+## Demo Project
+
+A lightweight demo dataset is included in `examples/demo-project`.
+
+It contains sample HR policy, insurance FAQ, government service guide, and medical billing explanation documents. Use it to test the basic flow:
+
+```text
+create knowledge base -> upload sample document -> ask a question -> inspect source-aware answer
+```
+
+Example questions:
+
+- What documents are required for remote work approval?
+- When should an employee submit an expense reimbursement?
+- What is the difference between a deductible and coinsurance?
+- What should a resident prepare before booking a service appointment?
 
 ## Features
 
@@ -63,6 +91,14 @@ scripts/             Local helper scripts
 
 ## Quick Start
 
+Clone and prepare local configuration:
+
+```bash
+git clone https://github.com/fszc2007-tech/NexusClaw-open-source.git
+cd NexusClaw-open-source
+./scripts/demo_setup.sh
+```
+
 Start MySQL and Redis:
 
 ```bash
@@ -73,10 +109,10 @@ Start the backend:
 
 ```bash
 cd backend/api-server
-cp .env.example .env
 python3.13 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+alembic upgrade head
 uvicorn main:app --reload --port 8000
 ```
 
@@ -98,6 +134,20 @@ pnpm dev
 
 For local RAG setup and optional model-backed retrieval, see `docs/LOCAL_DEV.md`.
 
+## How It Differs From Generic RAG Starters
+
+Many RAG starters focus on a single chat endpoint. NexusClaw includes the surrounding product and operations surface:
+
+- admin UI for projects, knowledge, files, prompts, logs, and tests
+- portal UI for end users
+- source-aware answer generation and retrieval controls
+- document parsing and table-aware ingestion
+- governance workflows for stale, duplicated, or conflicting knowledge
+- evaluation datasets and task tracking
+- scene runtime helpers for structured workflows beyond free-form chat
+
+See `docs/WHY_NEXUSCLAW.md` for a longer comparison.
+
 ## Configuration
 
 Configuration is environment-driven. Use the checked-in example files as templates:
@@ -112,6 +162,7 @@ Do not commit real `.env` files, credentials, uploaded documents, generated stor
 ## Documentation
 
 - `docs/LOCAL_DEV.md`
+- `docs/WHY_NEXUSCLAW.md`
 - `docs/api/API_SPEC.md`
 - `docs/db/SCHEMA.md`
 - `docs/tech-design/TECH_DESIGN.md`

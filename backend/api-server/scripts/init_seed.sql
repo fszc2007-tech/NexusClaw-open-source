@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS project_persona (
   id BIGINT PRIMARY KEY AUTO_INCREMENT,
   project_id BIGINT NOT NULL UNIQUE,
   assistant_name VARCHAR(64) NOT NULL DEFAULT 'NexusClaw',
-  assistant_role VARCHAR(128) NOT NULL DEFAULT '稅務問答助手',
+  assistant_role VARCHAR(128) NOT NULL DEFAULT '知識服務助理',
   system_prompt TEXT NULL,
   style_rules TEXT NULL,
   opening_text TEXT NULL,
@@ -25,5 +25,5 @@ CREATE TABLE IF NOT EXISTS project_persona (
 );
 
 INSERT INTO projects (project_key, name, description, status)
-VALUES ('nexusclaw', 'NexusClaw', '政务知识问答平台', 'active')
+VALUES ('nexusclaw', 'NexusClaw', 'Knowledge Q&A platform', 'active')
 ON DUPLICATE KEY UPDATE name = VALUES(name), description = VALUES(description), status = VALUES(status);
